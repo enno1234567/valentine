@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>I knew it ❤️</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="love-page">
+
+    <div class="love-content">
+        <h1>Yaaay ❤️</h1>
+        <p>You just made my day 💕</p>
+    </div>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    function createHeart() {
+        const heart = document.createElement("div");
+        heart.className = "heart";
+        heart.innerHTML = "❤️";
+
+        heart.style.left = Math.random() * 100 + "vw";
+        heart.style.animationDuration = (Math.random() * 2 + 3) + "s";
+        heart.style.fontSize = (Math.random() * 20 + 15) + "px";
+
+        document.body.appendChild(heart);
+
+        setTimeout(() => {
+            heart.remove();
+        }, 6000);
+    }
+
+    setInterval(createHeart, 180);
+});
+</script>
+
+</body>
+</html>
